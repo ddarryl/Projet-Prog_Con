@@ -13,10 +13,10 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        src/main.cpp
-        src/View/mainwindow.cpp
-        src/View/mainwindow.h
-        src/View/mainwindow.ui
+        main.cpp
+        View/mainwindow.cpp
+        View/mainwindow.h
+        View/mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -60,7 +60,7 @@ set_target_properties(Projet-Prog_Con PROPERTIES
 
 include(GNUInstallDirs)
 install(TARGETS Projet-Prog_Con
-    BUNDLE DESTINATION .
+    BUNDLE DESTINATION ..
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

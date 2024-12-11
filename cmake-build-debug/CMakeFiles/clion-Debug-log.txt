@@ -1,4 +1,1 @@
-/snap/clion/308/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/308/bin/ninja/linux/x64/ninja -G Ninja -S /home/d_darryl/CLionProjects/Projet-Prog_Con -B /home/d_darryl/CLionProjects/Projet-Prog_Con/cmake-build-debug
--- Configuring done (0.1s)
--- Generating done (0.1s)
--- Build files have been written to: /home/d_darryl/CLionProjects/Projet-Prog_Con/cmake-build-debug
+CMakeLists.txt not found in /home/d_darryl/CLionProjects/Projet-Prog_Con Select CMakeLists.txt

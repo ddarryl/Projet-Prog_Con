@@ -76,6 +76,60 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Controller/CommandController.h",
+			"MU",
+			"IFQ4TM45GG/moc_CommandController.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Controller/StockController.h",
+			"MU",
+			"IFQ4TM45GG/moc_StockController.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Controller/TableController.h",
+			"MU",
+			"IFQ4TM45GG/moc_TableController.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Model/CommandModel.h",
+			"MU",
+			"TJWESXFFYF/moc_CommandModel.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Model/StockModel.h",
+			"MU",
+			"TJWESXFFYF/moc_StockModel.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/Model/TableModel.h",
+			"MU",
+			"TJWESXFFYF/moc_TableModel.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/View/CommandView.h",
+			"MU",
+			"GT66W5ZSTU/moc_CommandView.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/View/StockView.h",
+			"MU",
+			"GT66W5ZSTU/moc_StockView.cpp",
+			null
+		],
+		[
+			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/View/TableView.h",
+			"MU",
+			"GT66W5ZSTU/moc_TableView.cpp",
+			null
+		],
+		[
 			"/home/d_darryl/CLionProjects/Projet-Prog_Con/src/View/mainwindow.h",
 			"MU",
 			"GT66W5ZSTU/moc_mainwindow.cpp",
