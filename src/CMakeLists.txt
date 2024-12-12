@@ -9,6 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -17,6 +19,49 @@ set(PROJECT_SOURCES
         View/mainwindow.cpp
         View/mainwindow.h
         View/mainwindow.ui
+        Controller/controlleurChefDeRang.cpp
+        Controller/controlleurChefDeRang.h
+        Controller/controlleurCuisinier.cpp
+        Controller/controlleurCuisinier.h
+        Controller/controlleurMaitreHotel.cpp
+        Controller/controlleurMaitreHotel.h
+        Controller/controlleurPlongeur.cpp
+        Controller/controlleurPlongeur.h
+        Controller/controlleurServeur.cpp
+        Controller/controlleurServeur.h
+        Controller/controlleurStock.cpp
+        Controller/controlleurStock.h
+        Model/chefDeRang.cpp
+        Model/chefDeRang.h
+        Model/cuisinier.cpp
+        Model/cuisinier.h
+        Model/maitreHotel.cpp
+        Model/maitreHotel.h
+        Model/plongeur.cpp
+        Model/plongeur.h
+        Model/serveur.cpp
+        Model/serveur.h
+        Model/stockGestion.cpp
+        Model/stockGestion.h
+        View/vueChefDeRang.cpp
+        View/vueChefDeRang.h
+        View/vueCuisinier.cpp
+        View/vueCuisinier.h
+        View/vueMaitreHotel.cpp
+        View/vueMaitreHotel.h
+        View/vuePlongeur.cpp
+        View/vuePlongeur.h
+        View/vueServeur.cpp
+        View/vueServeur.h
+        View/vueStock.cpp
+        View/vueStock.h
+        Tests/Test.cpp
+        Tests/testChefDeRang.cpp
+        Tests/testCuisinier.cpp
+        Tests/testMaitreHotel.cpp
+        Tests/testPlongeur.cpp
+        Tests/testServeur.cpp
+        Tests/testStockGestion.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -42,7 +87,12 @@ else()
     endif()
 endif()
 
-target_link_libraries(Projet-Prog_Con PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(Projet-Prog_Con PRIVATE
+        Qt${QT_VERSION_MAJOR}::Widgets
+        gtest
+        gtest_main
+)
+enable_testing()
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
