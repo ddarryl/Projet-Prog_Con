@@ -1,5 +1,10 @@
 <RCC>
-    <qresource prefix="/src/Images">
+    <qresource prefix="/Images">
         <file>Background.jpg</file>
+        <file>table2.png</file>
+        <file>table4.png</file>
+        <file>table6.png</file>
+        <file>table8.png</file>
+        <file>table10.png</file>
     </qresource>
 </RCC>

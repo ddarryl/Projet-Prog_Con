@@ -13,13 +13,6 @@
   <property name="windowTitle">
    <string>Restaurant</string>
   </property>
-  <property name="styleSheet">
-    <string>
-     background-image: url(:/src/Images/Background.jpg);
-     background-repeat: no-repeat;
-     background-position: center;
-    </string>
-  </property>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

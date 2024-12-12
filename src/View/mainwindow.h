@@ -2,26 +2,22 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QGraphicsView>
-#include <QGraphicsRectItem>
-#include <QTimer>
-
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
-QT_END_NAMESPACE
+#include <QLabel>
+#include <QVBoxLayout>
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
-
+    QWidget *central;
+    QVBoxLayout *verticalLayout;
+    QLabel *table2;
+    QLabel *table4;
 };
-#endif
+
+#endif // MAINWINDOW_H
