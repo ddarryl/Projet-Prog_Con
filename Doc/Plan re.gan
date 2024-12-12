@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="PROJET PROGRAMMATION SYSTEME " company="Groupe 14" webLink="" view-date="2024-11-28" view-index="0" gantt-divider-location="461" resource-divider-location="300" version="3.2.3230" locale="fr_FR">
+    <description>
+        <![CDATA[Une grande chaîne internationale de restaurants souhaite s’équiper d’une nouvelle 
+application informatique pour améliorer l’accueil du public, le remplissage des salles, 
+la gestion des réservations et l’organisation du travail en cuisine.  
+Depuis quelque temps, dans un restaurant, les incidents regrettables se multiplient : 
+file d’attente trop importante, désorganisation du service entre la salle et la cuisine, 
+manque de matériel pour servir ou cuisiner entrainant de très longues attentes en 
+salle pour les clients…  En résumé, les clients partaient très insatisfaits. Aujourd’hui 
+on sait qu’un client insatisfait prend une des applications pour noter le restaurant 
+et saisit un avis négatif, ce qui a pour conséquence de baisser la réputation de la 
+maison.  
+Le directeur du restaurant a décidé d’investir dans le développement d’une 
+application de gestion et supervision du fonctionnement de son restaurant (salle de 
+restauration et cuisine). Il fait appel à vous, étudiants ingénieurs en X3 de UCAC
+ICAM, pour l’aider sur ce projet. Vous devez analyser les résultats de la simulation 
+et faire des propositions d’amélioration. Vos propositions seront dans l’obligation de 
+reposer sur des éléments mesurables pour mettre en évidence, sans ambiguïté, les 
+gains que vos propositions suggèrent et donc doivent être exprimées en unité de 
+mesure (temps, pourcentage, argent, etc…). ]]>
+    </description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="314" order="0"/>
+        <field id="tpd4" name="Date de début" width="78" order="1"/>
+        <field id="tpd5" name="Date de fin" width="68" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelDown" value="length"/>
+        <option id="taskLabelLeft" value="resources"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="color.recent">
+            <![CDATA[#00ffff #000000]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="73" name="Phase de Préparation" color="#000000" meeting="false" start="2024-12-02" duration="1" complete="0" thirdDate="2024-10-09" thirdDate-constraint="0" expand="false">
+            <task id="125" name="Réunion de lancement du projet" color="#00ffff" meeting="false" start="2024-12-02" duration="1" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="0" name="Appréhension du sujet et analyse des besoins" color="#00ffff" meeting="false" start="2024-12-02" duration="1" complete="0" thirdDate="2024-05-23" thirdDate-constraint="0" expand="true">
+                <depend id="2" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="2" name="Elaboration du planning" color="#00ffff" meeting="false" start="2024-12-02" duration="1" complete="0" thirdDate="2024-05-13" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="59" name="Phase de Conception" color="#000000" meeting="false" start="2024-12-02" duration="10" complete="0" thirdDate="2024-10-09" thirdDate-constraint="0" expand="false">
+            <depend id="118" type="4" difference="0" hardness="Strong"/>
+            <task id="115" name="Création des diagrammes UML" color="#00ffff" meeting="false" start="2024-12-02" duration="5" complete="0" thirdDate="2024-10-06" thirdDate-constraint="0" expand="true"/>
+            <task id="116" name="Développement du MCD et script SQL" color="#00ffff" meeting="false" start="2024-12-03" duration="9" complete="0" thirdDate="2024-10-06" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="118" name="Phase de  Développement" color="#000000" meeting="false" start="2024-12-09" duration="4" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="false">
+            <task id="119" name="Gestion des stocks et commandes" color="#00ffff" meeting="false" start="2024-12-10" duration="3" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="120" name="Modélisation des postes (cuisine, salle) et matériel" color="#00ffff" meeting="false" start="2024-12-09" duration="4" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="121" name="Simulation graphique" color="#00ffff" meeting="false" start="2024-12-11" duration="2" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="122" name="Système de communication via sockets" color="#00ffff" meeting="false" start="2024-12-11" duration="2" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="123" name="Développement en C++ avec interface QT" color="#00ffff" meeting="false" start="2024-12-11" duration="2" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="66" name="Tests et Validation" color="#000000" meeting="false" start="2024-12-10" duration="3" complete="0" thirdDate="2024-10-09" thirdDate-constraint="0" expand="false">
+            <task id="124" name="Tests unitaires et intégration via Git/TDD" color="#00ffff" meeting="false" start="2024-12-10" duration="3" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true">
+                <depend id="22" type="3" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="112" name="Documentation" color="#000000" meeting="false" start="2024-12-02" duration="11" complete="0" thirdDate="2024-10-07" thirdDate-constraint="0" expand="false">
+            <task id="57" name="Document détaillé sur tous les design pattern" color="#00ffff" meeting="false" start="2024-12-02" duration="2" complete="0" thirdDate="2024-10-09" thirdDate-constraint="0" expand="true"/>
+            <task id="117" name="Budget" color="#00ffff" meeting="false" start="2024-12-03" duration="2" complete="0" thirdDate="2024-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="22" name="Rédaction du rapport  de test" color="#00ffff" meeting="false" start="2024-12-12" duration="1" complete="0" thirdDate="2024-05-08" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="113" name="Présentation" color="#000000" meeting="false" start="2024-12-11" duration="3" complete="0" thirdDate="2024-10-07" thirdDate-constraint="0" expand="false">
+            <task id="23" name="Powerpoint" color="#00ffff" meeting="false" start="2024-12-11" duration="1" complete="0" thirdDate="2024-05-08" thirdDate-constraint="0" expand="true"/>
+            <task id="50" name="Préparer la soutenenance" color="#00ffff" meeting="false" start="2024-12-12" duration="2" complete="0" thirdDate="2024-05-16" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="PEDJIOBAH Jefferson" function="SoftwareDevelopment:2" contacts="" phone="+237 657834265">
+            <rate name="standard" value="100000"/>
+        </resource>
+        <resource id="1" name="ANDOH Sus-Shinley " function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="EBOULE Charles " function="Default:1" contacts="" phone=""/>
+        <resource id="3" name="JAKPOU Kevin " function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="4" name="Groupe projet" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="57" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="119" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="120" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="122" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="116" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="115" resource-id="2" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="121" resource-id="2" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="123" resource-id="2" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="124" resource-id="2" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="117" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="2" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="50" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="125" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+    <roles>
+        <role id="1" name="Administrateurs systèmes"/>
+    </roles>
+</project>
