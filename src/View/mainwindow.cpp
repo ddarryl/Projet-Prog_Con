@@ -17,8 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
         table->setBrush(Qt::blue);
     }
 
-    QGraphicsEllipseItem *client = scene->addEllipse(10, 300, 20, 20, QPen(), QBrush(Qt::green));
-    QGraphicsRectItem *serveur = scene->addRect(10, 200, 20, 20, QPen(), QBrush(Qt::red));
+    client = scene->addEllipse(10, 300, 20, 20, QPen(), QBrush(Qt::green));
+    serveur = scene->addRect(10, 200, 20, 20, QPen(), QBrush(Qt::red));
 
     client->setPos(200, 300);
 
@@ -47,6 +47,6 @@ void MainWindow::on_pauseButton_clicked() {
 }
 
 void MainWindow::on_speedUpButton_clicked() {
-    simulationSpeed /= 2; // Double la vitesse
+    simulationSpeed /= 2;
     simulationTimer->setInterval(simulationSpeed);
 }
