@@ -17,18 +17,6 @@ set(PROJECT_SOURCES
         View/mainwindow.cpp
         View/mainwindow.h
         View/mainwindow.ui
-        Model/Client.h
-        Model/Client.cpp
-        Model/Commande.h
-        Model/Commande.cpp
-        Model/Plat.h
-        Model/Plat.cpp
-        Model/Ingredient.h
-        Model/Ingredient.cpp
-        View/Affichage.h
-        View/Affichage.cpp
-        Controller/Controller.h
-        Controller/Controller.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
