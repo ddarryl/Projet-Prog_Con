@@ -22,7 +22,7 @@
   </property>
  </widget>
  <resources>
-  <include location="src/resources.qrc"/>
+  <include location="../resources.qrc"/>
  </resources>
  <connections/>
 </ui>
