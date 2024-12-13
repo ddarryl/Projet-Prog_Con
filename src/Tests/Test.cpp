@@ -4,9 +4,13 @@
 #include "../Model/cuisinier.h"
 #include "../Model/plongeur.h"
 #include "../Model/stockGestion.h"
+#include "../Model/commis.h"
+#include "../Model/chefDeCuisine.h"
+#include "../Model/client.h"
 #include <gtest/gtest.h>
 #include <fstream>
 #include <iostream>
+#include "../../src/Controller/port_manager.h"
 
 // Function to write logs
 void logTest(const std::string& message) {
@@ -22,6 +26,7 @@ void logTest(const std::string& message) {
 // Complete simulation test
 TEST(SimulationTest, ScenarioComplet) {
     logTest("Starting test: Complete scenario simulation");
+    int port = getAvailablePort();
 
     // Initialize entities
     MaitreHotel maitre;
@@ -30,7 +35,9 @@ TEST(SimulationTest, ScenarioComplet) {
     Cuisinier cuisinier;
     Plongeur plongeur;
     StockGestion stock;
-    ComptoirSocket comptoir(8080); // Create an instance of ComptoirSocket
+    Commis commis;
+    ChefDeCuisine chefDeCuisine;
+    ComptoirSocket comptoir(port); // Create an instance of ComptoirSocket
 
     // Step 1: Add client
     maitre.ajouterClient("Client 1");
@@ -80,5 +87,13 @@ TEST(SimulationTest, ScenarioComplet) {
     EXPECT_EQ(stock.getStock("Viande"), 15);
     logTest("Step 7: Stock management completed.");
 
-    logTest("End of test: Complete scenario simulation.");
-}
+    // Step 8: Test Commis
+    commis.preparerIngredient("Tomate");
+    EXPECT_EQ(commis.getIngredientsPrepares().size(), 1);
+    logTest("Step 8: Ingredient prepared by Commis.");
+
+    // Step 9: Test ChefDeCuisine
+    chefDeCuisine.ajouterCommande("Pizza");
+    EXPECT_EQ(chefDeCuisine.getPlatsPrets().size(), 0);
+    chefDeCuisine.superviserPreparation();
+    EXPECT_EQ(chefDeCuisine.getPlats

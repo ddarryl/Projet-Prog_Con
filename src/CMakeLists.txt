@@ -55,13 +55,6 @@ set(PROJECT_SOURCES
         View/vueServeur.h
         View/vueStock.cpp
         View/vueStock.h
-        Tests/Test.cpp
-        Tests/testChefDeRang.cpp
-        Tests/testCuisinier.cpp
-        Tests/testMaitreHotel.cpp
-        Tests/testPlongeur.cpp
-        Tests/testServeur.cpp
-        Tests/testStockGestion.cpp
         Model/EtapeRecette.h
         Model/Recette.h
         Model/commis.h
@@ -92,6 +85,13 @@ set(PROJECT_SOURCES
         Model/dressage.h
         Model/carte_restaurant.h
         mysql.h
+        Controller/port_manager.h
+        Controller/port_manager.cpp
+#        Tests/testRessourcesGestion.cpp
+#        Tests/testEtapeRecette.cpp
+#        Tests/testCommis.cpp
+#        Tests/testClient.cpp
+#        Tests/testChefDeCuisine.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
