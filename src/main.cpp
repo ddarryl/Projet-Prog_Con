@@ -19,9 +19,9 @@
 #include <unistd.h>
 #include "Model/assiette.h"
 #include "Model/ressourceGestion.h"
-#include "../Pools_/resourcePool.h"
+#include "../Pools/resourcePool.h"
 #include "Model/table.h"
-#include "../Pools_/threadPool.h"
+#include "../Pools/threadPool.h"
 #include "Model/chefDeCuisine.h"
 #include "../src/Model/serviceManager.h"
 #include "Model/utils.h"

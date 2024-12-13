@@ -74,12 +74,12 @@ set(PROJECT_SOURCES
         ipc/ipc_utils.cpp
         Model/ressourceGestion.h
         Model/ressourceGestion.cpp
-        ../Pools_/resourcePool.h
-        ../Pools_/resourcePool.cpp
+        Pools/resourcePool.h
+        Pools/resourcePool.cpp
         Model/assiette.h
         Model/table.h
-        ../Pools_/threadPool.h
-        ../Pools_/threadpool.cpp
+        Pools/threadPool.h
+        Pools/threadpool.cpp
         Model/table.cpp
         Model/assiette.cpp
         Model/utils.h
