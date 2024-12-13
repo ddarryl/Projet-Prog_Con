@@ -87,11 +87,11 @@ set(PROJECT_SOURCES
         mysql.h
         Controller/port_manager.h
         Controller/port_manager.cpp
-#        Tests/testRessourcesGestion.cpp
-#        Tests/testEtapeRecette.cpp
-#        Tests/testCommis.cpp
-#        Tests/testClient.cpp
-#        Tests/testChefDeCuisine.cpp
+#        Tests_/testRessourcesGestion.cpp
+#        Tests_/testEtapeRecette.cpp
+#        Tests_/testCommis.cpp
+#        Tests_/testClient.cpp
+#        Tests_/testChefDeCuisine.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
