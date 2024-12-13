@@ -1,6 +1,9 @@
 #include "resourcePool.h"
+#include "../src/Model/assiette.h"
+#include "../src/Model/table.h"
+#include "../src/Model/utils.h"
 
-class utils;
+// Implementation of ResourcePool methods
 
 template <typename T>
 ResourcePool<T>::ResourcePool(size_t size, std::function<T()> initializer) : createResource(initializer) {
@@ -30,3 +33,5 @@ void ResourcePool<T>::release(T resource) {
 
 // Explicit instantiation for shared_ptr<utils>
 template class ResourcePool<std::shared_ptr<utils>>;
+template class ResourcePool<Assiette*>; // Assurez-vous d'ajouter cette ligne pour Assiette
+template class ResourcePool<Table*>; // Assurez-vous d'ajouter cette ligne pour Table

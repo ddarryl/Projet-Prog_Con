@@ -9,15 +9,15 @@
 template <typename T>
 class ResourcePool {
 public:
-    ResourcePool(size_t size, std::function<T()> initializer); // Accept a function to create resources
+    ResourcePool(size_t size, std::function<T()> initializer);
     T acquire();
     void release(T resource);
 
 private:
-    std::queue<T> pool;                        // Available resources
-    std::mutex mutexPool;                      // Protect pool access
-    std::condition_variable condition;         // Synchronize threads
-    std::function<T()> createResource;        // Store the resource creation function
+    std::queue<T> pool;
+    std::mutex mutexPool;
+    std::condition_variable condition;
+    std::function<T()> createResource;
 };
 
 #endif // RESOURCE_POOL_H

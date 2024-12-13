@@ -1,6 +1,5 @@
 #include "stockGestion.h"
-#include <QMutexLocker> // Include for QMutexLocker
-#include <QMutex>      // Include for QMutex
+#include <QMutexLocker>
 #include <fstream>
 #include <iostream>
 #include <thread>

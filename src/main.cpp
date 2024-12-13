@@ -24,6 +24,7 @@
 #include "../Pools/threadPool.h"
 #include "Model/chefDeCuisine.h"
 #include "../src/Model/serviceManager.h"
+#include "../src/Model/stockGestion.h"
 #include "Model/utils.h"
 #include "../src/Model/dressage.h"
 #include "../src/Model/carte_restaurant.h"
@@ -72,7 +73,8 @@ void positionnerViande() {
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     RessourceGestion gestion;
-    StockGestion manager;
+    ServiceManager manager;
+    StockGestion gest;
     Recette recette("Soupe aux légumes");
     Dressage dressage(3);
     CarteRestaurant carte;
@@ -269,17 +271,17 @@ int main(int argc, char *argv[]) {
     // Wait for a moment to let tasks complete
     std::this_thread::sleep_for(std::chrono::seconds(10));
     // Add dishes for table 1
-    manager.ajouterPlat(1, "Soup");
-    manager.ajouterPlat(1, "Steak");
-    manager.ajouterPlat(1, "Salad");
+    gest.ajouterPlat(1, "Soup");
+    gest.ajouterPlat(1, "Steak");
+    gest.ajouterPlat(1, "Salad");
 
     // Prepare dishes in parallel
-    std::thread t1(&StockGestion::preparerPlat, std::ref(manager), 1, "Soup");
-    std::thread t2(&StockGestion::preparerPlat, std::ref(manager), 1, "Steak");
-    std::thread t3(&StockGestion::preparerPlat, std::ref(manager), 1, "Salad");
+    std::thread t1(&StockGestion::preparerPlat, std::ref(gest), 1, "Soup");
+    std::thread t2(&StockGestion::preparerPlat, std::ref(gest), 1, "Steak");
+    std::thread t3(&StockGestion::preparerPlat, std::ref(gest), 1, "Salad");
 
     // Serve table 1
-    manager.servirTable(1);
+    gest.servirTable(1);
 
     // Join threads
     t1.join();
