@@ -1,9 +1,6 @@
 #include "stockGestion.h"
-#include <QMutexLocker> // Include for QMutexLocker
-#include <QMutex>      // Include for QMutex
 #include <fstream>
 #include <iostream>
-#include <thread>
 
 StockGestion::StockGestion() {
     stock["Viande"] = 10;
@@ -119,34 +116,15 @@ void StockGestion::notifyStockChange(const std::string& item, int quantite) {
     }
 }
 
+void StockGestion::marquerPlatPret(int tableId, const std::string& plat) {
+    std::cout << "Dish " << plat << " is ready for table " << tableId << ".\n";
+}
+
 void StockGestion::ajouterPlat(int tableId, const std::string& plat) {
     tablePlats[tableId].push_back(plat);
     std::cout << "Plat ajouté : " << plat << " pour la table " << tableId << std::endl;
 }
 
-void StockGestion::marquerPlatPret(int tableId, const std::string& plat) {
-    std::cout << "Dish " << plat << " is ready for table " << tableId << ".\n";
-}
-
 void StockGestion::logAction(const std::string& action, const std::string& item, int quantite) const {
     std::cout << "LOG : " << action << " " << quantite << " " << item << ".\n";
-}
-
-void StockGestion::preparerPlat(int tableId, const std::string& plat) {
-    std::cout << "Préparation du plat " << plat << " pour la table " << tableId << ".\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
-    marquerPlatPret(tableId, plat);
-}
-
-void StockGestion::servirTable(int tableId) {
-    QMutexLocker locker(&mutexStock);
-    if (tablePlats.find(tableId) != tablePlats.end()) {
-        std::cout << "Service de la table " << tableId << " avec les plats : ";
-        for (const auto& plat : tablePlats[tableId]) {
-            std::cout << plat << " ";
-        }
-        std::cout << std::endl;
-    } else {
-        std::cout << "Aucun plat à servir pour la table " << tableId << ".\n";
-    }
 }

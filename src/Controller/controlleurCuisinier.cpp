@@ -1,4 +1,4 @@
-#include "controlleurCuisinier.h"
+#include "controlleurCuisinier.txt"
 
 ControleurCuisinier::ControleurCuisinier(VueCuisinier *vue, Cuisinier *cuisinier)
     : vue(vue), cuisinier(cuisinier) {}
@@ -13,10 +13,10 @@ void ControleurCuisinier::ajouterCommande(const std::string& commande) {
     afficherPlatsEnPreparation();
 }
 
-void ControleurCuisinier::preparerPlat() {
+void ControleurCuisinier::preparerPlat(ComptoirSocket& comptoir) { // Add ComptoirSocket parameter
     if (!cuisinier->getPlatsEnPreparation().empty()) {
         std::string plat = cuisinier->getPlatsEnPreparation().front();
-        cuisinier->preparerPlat();
+        cuisinier->preparerPlat(comptoir); // Pass the comptoir parameter
         vue->afficherPlatPrepare(plat);
     }
 }

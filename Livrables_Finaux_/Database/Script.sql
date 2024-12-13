@@ -93,6 +93,79 @@ CREATE TABLE notifications (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE
 );
 
+
+CREATE TABLE order_history (
+    history_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    status ENUM('Cancelled', 'Served') NOT NULL,
+    update_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
+
+
+CREATE VIEW employee_performance AS
+SELECT 
+    employees.name AS employee_name,
+    COUNT(orders.order_id) AS orders_handled
+FROM 
+    employees
+LEFT JOIN 
+    orders ON employees.employee_id = orders.employee_id
+GROUP BY 
+    employees.employee_id;
+
+
+DELIMITER //
+
+CREATE TRIGGER stock_below_threshold
+AFTER UPDATE ON ingredients
+FOR EACH ROW
+BEGIN
+    IF NEW.restock_threshold > NEW.unit THEN
+        INSERT INTO notifications (order_id, message)
+        VALUES (NULL, CONCAT('Stock low for ', NEW.name, '. Remaining: ', NEW.unit));
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+DELIMITER //
+
+CREATE PROCEDURE reset_database()
+BEGIN
+    -- Commencer une transaction
+    START TRANSACTION;
+
+    -- Vider les tables
+    TRUNCATE TABLE orders;
+    TRUNCATE TABLE payments;
+    TRUNCATE TABLE customers;
+    TRUNCATE TABLE menu;
+    TRUNCATE TABLE recipes;
+    TRUNCATE TABLE recipe_ingredients;
+    TRUNCATE TABLE employees;
+    TRUNCATE TABLE ingredients;
+
+    -- Repeupler les tables ici
+    INSERT INTO ingredients (ingredient_id, name, unit, restock_threshold)
+    VALUES
+        (1, 'Crab meat', '300g', 10),
+        (2, 'Minced beef', '10kg', 2),
+        (3, 'Sausage meat', '10kg', 2);
+
+    -- Ajouter d'autres jeux de données
+
+    -- Valider la transaction
+    COMMIT;
+END;
+//
+
+DELIMITER ;
+
+
 -- Script d'insertion
 
     use RestaurantManagement;

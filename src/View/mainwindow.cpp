@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap2 = pixmap2.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table2->setPixmap(scaledPixmap2);
         table2->setFixedSize(100, 100);
-        mainLayout->addWidget(table2, row, i); // Ajout des tables de 2
+        mainLayout->addWidget(table2, 1, i); // Ajout des tables de 2
     }
     row++;
 
@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap4 = pixmap4.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table4->setPixmap(scaledPixmap4);
         table4->setFixedSize(100, 100);
-        mainLayout->addWidget(table4, row, i); // Ajout des tables de 4
+        mainLayout->addWidget(table4, 0, i); // Ajout des tables de 4
     }
     row++;
 
@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QPixmap scaledPixmap10 = pixmap10.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     table10_1->setPixmap(scaledPixmap10);
     table10_1->setFixedSize(100, 100);
-    mainLayout->addWidget(table10_1, row, 2); // Ajout de la table de 10
+    mainLayout->addWidget(table10_1, 2, 3); // Ajout de la table de 10
 
     // Carré 2
     row = 0; // Réinitialiser la ligne pour le carré 2
@@ -69,7 +69,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap2 = pixmap2.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table2->setPixmap(scaledPixmap2);
         table2->setFixedSize(100, 100);
-        mainLayout->addWidget(table2, row, i + 6); // Ajout des tables de 2 dans la colonne 6 à 10
+        mainLayout->addWidget(table2, 3, i + 6); // Ajout des tables de 2 dans la colonne 6 à 10
     }
     row++;
 
@@ -80,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap4 = pixmap4.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table4->setPixmap(scaledPixmap4);
         table4->setFixedSize(100, 100);
-        mainLayout->addWidget(table4, row, i + 6); // Ajout des tables de 4 dans la colonne 6 à 10
+        mainLayout->addWidget(table4, 2, i + 6); // Ajout des tables de 4 dans la colonne 6 à 10
     }
     row++;
 
@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap6 = pixmap6.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table6->setPixmap(scaledPixmap6);
         table6->setFixedSize(100, 100);
-        mainLayout->addWidget(table6, row, i + 6); // Ajout des tables de 6 dans la colonne 6 à 10
+        mainLayout->addWidget(table6, 1, i + 6); // Ajout des tables de 6 dans la colonne 6 à 10
     }
     row++;
 
@@ -102,7 +102,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QPixmap scaledPixmap8 = pixmap8.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         table8->setPixmap(scaledPixmap8);
         table8->setFixedSize(100, 100);
-        mainLayout->addWidget(table8, row, i + 6); // Ajout des tables de 8 dans la colonne 6 à 10
+        mainLayout->addWidget(table8, 0, i + 6); // Ajout des tables de 8 dans la colonne 6 à 10
     }
     row++;
 
@@ -112,13 +112,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QPixmap scaledPixmap10_2 = pixmap10_2.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     table10_2->setPixmap(scaledPixmap10_2);
     table10_2->setFixedSize(100, 100);
-    mainLayout->addWidget(table10_2, row, 8); // Ajout de la table de 10 dans la colonne 8
+    mainLayout->addWidget(table10_2, 1, 10); // Ajout de la table de 10 dans la colonne 8
 
     // Ajustement de la mise en page
-    mainLayout->setSpacing(20);
+    mainLayout->setSpacing(25);
     mainLayout->setAlignment(Qt::AlignCenter);
 }
 
-MainWindow::~MainWindow()
-{
-}
+MainWindow::~MainWindow() {}

@@ -3,13 +3,16 @@
 
 #include <vector>
 #include <string>
+#include "ComptoirSocket.h"
 
 class Cuisinier {
 public:
     Cuisinier();
     void ajouterCommande(const std::string& commande);
-    void preparerPlat();
-    std::vector<std::string> getPlatsEnPreparation() const; // Renommé pour plus de clarté
+    void preparerPlat(ComptoirSocket& comptoir);
+    std::vector<std::string> getPlatsEnPreparation() const;
+    void recevoirCommande(int msgQueueId);
+    void ajouterRepasPret(const std::string& plat, ComptoirSocket& comptoir);
 
 private:
     std::vector<std::string> platsEnPreparation;

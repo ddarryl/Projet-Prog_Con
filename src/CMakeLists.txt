@@ -19,18 +19,18 @@ set(PROJECT_SOURCES
         View/mainwindow.cpp
         View/mainwindow.h
         View/mainwindow.ui
-        Controller/controlleurChefDeRang.cpp
-        Controller/controlleurChefDeRang.h
-        Controller/controlleurCuisinier.cpp
-        Controller/controlleurCuisinier.h
-        Controller/controlleurMaitreHotel.cpp
-        Controller/controlleurMaitreHotel.h
-        Controller/controlleurPlongeur.cpp
-        Controller/controlleurPlongeur.h
-        Controller/controlleurServeur.cpp
-        Controller/controlleurServeur.h
-        Controller/controlleurStock.cpp
-        Controller/controlleurStock.h
+#        Controller/controlleurChefDeRang.cpp
+#        Controller/controlleurChefDeRang.h
+#        Controller/controlleurCuisinier.h
+#        Controller/controlleurCuisinier.h
+#        Controller/controlleurMaitreHotel.cpp
+#        Controller/controlleurMaitreHotel.h
+#        Controller/controlleurPlongeur.cpp
+#        Controller/controlleurPlongeur.h
+#        Controller/controlleurServeur.cpp
+#        Controller/controlleurServeur.h
+#        Controller/controlleurStock.cpp
+#        Controller/controlleurStock.h
         Model/chefDeRang.cpp
         Model/chefDeRang.h
         Model/cuisinier.cpp
@@ -62,6 +62,36 @@ set(PROJECT_SOURCES
         Tests/testPlongeur.cpp
         Tests/testServeur.cpp
         Tests/testStockGestion.cpp
+        Model/EtapeRecette.h
+        Model/Recette.h
+        Model/commis.h
+        Model/commis.cpp
+        Model/client.h
+        Model/client.cpp
+        Model/ComptoirSocket.h
+        Model/ComptoirSocket.cpp
+        ipc/ipc_utils.h
+        ipc/ipc_utils.cpp
+        Model/ressourceGestion.h
+        Model/ressourceGestion.cpp
+        ../Pools/resourcePool.h
+        ../Pools/resourcePool.cpp
+        Model/assiette.h
+        Model/table.h
+        ../Pools/threadPool.h
+        ../Pools/threadpool.cpp
+        Model/table.cpp
+        Model/assiette.cpp
+        Model/utils.h
+        Model/utils.cpp
+        Model/serviceManager.h
+        Model/serviceManager.cpp
+        Model/chefDeCuisine.h
+        Model/chefDeCuisine.cpp
+        Model/EtapeRecette.cpp
+        Model/dressage.h
+        Model/carte_restaurant.h
+        mysql.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

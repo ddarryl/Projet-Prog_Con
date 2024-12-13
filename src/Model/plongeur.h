@@ -7,14 +7,25 @@
 class Plongeur {
 public:
     Plongeur();
+
+    // Add a dirty item
     void ajouterObjetSale(const std::string& objet);
+
+    // Clean a single item
     void nettoyerObjet();
-    std::vector<std::string> getObjetsSales() const; // Renommé pour plus de clarté
-    std::vector<std::string> getObjetsNettoyes() const; // Nouvelle méthode pour obtenir les objets nettoyés
+
+    // Clean multiple items of the same type
+    void nettoyerObjets(const std::string& objet, int quantite);
+
+    // Get list of dirty items
+    std::vector<std::string> getObjetsSales() const;
+
+    // Get list of cleaned items
+    std::vector<std::string> getObjetsNettoyes() const;
 
 private:
-    std::vector<std::string> objetsSales;
-    std::vector<std::string> objetsNettoyes; // Nouveau vecteur pour les objets nettoyés
+    std::vector<std::string> objetsSales;    // Dirty items
+    std::vector<std::string> objetsNettoyes; // Cleaned items
 };
 
 #endif // PLONGEUR_H
